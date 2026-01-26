@@ -1,0 +1,47 @@
+{
+	"version": "1.0",
+	"lastUpdated": "2026-01-25",
+	"regions": [
+		{
+			"id": "europe",
+			"label": "Europa"
+		},
+		{
+			"id": "america",
+			"label": "América"
+		},
+		{
+			"id": "asia",
+			"label": "Asia"
+		},
+		{
+			"id": "africa",
+			"label": "África"
+		}
+	],
+	"miracles": [
+		{
+			"id": "lanciano",
+			"slug": "lanciano",
+			"name": "Milagro Eucarístico de Lanciano",
+			"description": "La hostia se transformó en carne y el vino en sangre visible.",
+			"location": "Lanciano, Italia",
+			"region": "europe",
+            "date": "2024-08-15",
+			"image": "/images/eucharistic-miracles/lanciano/cover.webp",
+			"publishedAt": "2024-08-15"
+		},
+
+		{
+			"id": "tixtla",
+			"slug": "tixtla",
+			"name": "Milagro Eucarístico de Tixtla",
+			"description": "La hostia comenzó a sangrar durante la misa.",
+			"location": "Tixtla, México",
+			"region": "america",
+            "date": "2024-08-15",
+			"image": "/images/eucharistic-miracles/tixtla/cover.webp",
+			"publishedAt": "2024-09-12"
+		}
+	]
+}

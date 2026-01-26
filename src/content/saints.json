@@ -1,0 +1,30 @@
+{
+	"version": "1.0",
+	"lastUpdated": "2026-01-25",
+	"saints": [
+		{
+			"id": "san-francisco-de-asis",
+			"slug": "san-francisco-de-asis",
+			"name": "San Francisco de Asís",
+			"description": "Fundador de la Orden Franciscana y ejemplo de vida en pobreza y humildad.",
+			"location": "Italia",
+			"date": "10-04",
+			"publishedAt": "2024-10-04",
+			"image": "/images/saints/san-francisco-de-asis/cover.webp",
+			"categories": ["Confesores"],
+			"tags": ["Fundadores", "Pobreza"]
+		},
+		{
+			"id": "santa-teresa-de-calcuta",
+			"slug": "santa-teresa-de-calcuta",
+			"name": "Santa Teresa de Calcuta",
+			"description": "Religiosa dedicada al servicio de los más pobres entre los pobres.",
+			"location": "India",
+			"date": "09-05",
+			"publishedAt": "2024-09-05",
+			"image": "/images/saints/santa-teresa-de-calcuta/cover.webp",
+			"categories": ["Santas"],
+			"tags": ["Fundadores", "Pobreza"]
+		}
+	]
+}
