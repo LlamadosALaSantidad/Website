@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+SA+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary: #04DEDE;
+$secondary: #F568DF;
+$terciary: #FFF2E3;
+$white: #fff;
+$black: #000;
+$gray: rgba(0, 0, 0, 0.05);
+$gray-2: rgba(0, 0, 0, 0.1);
+$dark-gray: #606060;
+$primary-gradient-linear: linear-gradient(90deg,rgba(4, 222, 222, 1) 0%, rgba(236, 8, 193, 1) 50%, rgba(245, 104, 223, 1) 100%);
+$secondary-gradient-linear: linear-gradient(90deg,rgba(45, 114, 227, 1) 0%, rgba(4, 222, 222, 1) 50%, rgba(245, 104, 223, 1) 100%);
+$primary-gradient-radial: radial-gradient(circle,rgba(245, 104, 223, 1) 0%, rgba(236, 8, 193, 1) 50%, rgba(4, 222, 222, 1) 100%);
+$secondary-gradient-radial: radial-gradient(circle,rgba(245, 104, 223, 1) 0%, rgba(4, 222, 222, 1) 50%, rgba(45, 114, 227, 1) 100%);
+$btn-radius: 0.75rem;
+$card-radius: 1rem;
+$title: "Edu SA Hand", cursive;
+$text: "Montserrat", sans-serif;
+$shadow: 0 4px 20px $gray;
+$dark-shadow: 0 10px 25px $gray-2;
