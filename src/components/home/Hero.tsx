@@ -1,6 +1,7 @@
 import { SITE_INFO } from "../../constants/site-info";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../constants/routes";
+import Button from "../ui/Button";
 
 function Hero() {
     return (
@@ -9,8 +10,8 @@ function Hero() {
             <h1>Descubre la belleza de la <span>Santidad</span></h1>
             <p>{SITE_INFO.description}</p>
             <div className="buttons">
-                <button><Link to={PATHS.SAINTS}>Explorar Santos</Link></button>
-                <button><Link to={PATHS.MIRACLES}>Ver Milagros</Link></button>
+                <Button variant="primary"><Link to={PATHS.SAINTS}>Explorar Santos</Link></Button>
+                <Button variant="secondary"><Link to={PATHS.MIRACLES}>Ver Milagros</Link></Button>
             </div>
         </section>
     );

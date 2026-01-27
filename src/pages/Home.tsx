@@ -10,6 +10,7 @@ function Home() {
         <>
             <Helmet>
                 <title>Inicio | Llamados a la Santidad</title>
+                <meta name="description" content="Descubre historias inspiradoras de santos católicos y milagros eucarísticos." />
             </Helmet>
             <main className="home">
                 <Hero />

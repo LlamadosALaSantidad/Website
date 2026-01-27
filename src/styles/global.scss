@@ -12,6 +12,10 @@ body {
 	font-weight: 300;
 }
 
+a, button, input, ::placeholder {
+	font-family: $text;
+}
+
 h1,
 h2,
 h3,
@@ -67,7 +71,7 @@ header {
 	}
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
 	header {
 		.navbar_toggle,
 		.close_nav {
@@ -94,7 +98,7 @@ header {
 }
 
 // Mobile
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 650px) {
 	header {
 		.navbar_toggle {
 			display: block;

@@ -7,6 +7,7 @@ function Menu() {
             <li>
                 <NavLink
                     to={PATHS.HOME}
+                    end
                     className={({ isActive }) => isActive ? "active-link" : ""}
                 >
                     Inicio
@@ -14,7 +15,7 @@ function Menu() {
             </li>
             <li>
                 <NavLink
-                    to={`/${PATHS.SAINTS}`}
+                    to={`${PATHS.SAINTS}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}
                 >
                     Santos
@@ -22,7 +23,7 @@ function Menu() {
             </li>
             <li>
                 <NavLink
-                    to={`/${PATHS.MIRACLES}`}
+                    to={`${PATHS.MIRACLES}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}
                 >
                     Milagros Eucarísticos
@@ -30,7 +31,7 @@ function Menu() {
             </li>
             <li>
                 <NavLink
-                    to={`/${PATHS.CONTACT}`}
+                    to={`${PATHS.CONTACT}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}
                 >
                     Contacto

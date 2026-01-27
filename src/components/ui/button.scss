@@ -1,0 +1,91 @@
+@use "../../styles/vars" as *;
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: $btn-radius;
+    box-shadow: $shadow;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &, a {
+        font-weight: 700;
+    }
+
+    &:hover {
+        box-shadow: $dark-shadow;
+    }
+
+    &.primary {
+        background-color: $primary;
+        
+        &, a {
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $secondary;
+            transform: translateY(-2px);
+        }
+    }
+
+    &.secondary {
+        background-color: transparent;
+        border: 2px solid $primary;
+
+        &, a{
+            color: $primary;
+        }
+
+        &:hover {
+            background-color: $primary;
+            transform: translateY(-2px);
+
+            &, a {
+                color: $white;
+            }
+        }
+    }
+
+    &.terciary {
+        background-color: $secondary;
+
+        &, a {
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $primary;
+            transform: translateY(-2px);
+        }
+    }
+
+    &.white {
+        background-color: $white;
+        
+        &, a{
+            color: $secondary;
+        }
+
+        &:hover {
+            background-color: $gray;
+        }
+    }
+
+    &.error {
+        background-color: $error;
+        padding: 0.5rem 1rem;
+
+        &, a{
+            color: $white;
+        }
+    }
+
+    &.ws {
+        background-color: #20BD5A;
+        
+        &, a {
+            color: $white;
+        }
+    }
+}

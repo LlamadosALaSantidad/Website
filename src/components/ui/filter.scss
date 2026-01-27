@@ -1,0 +1,82 @@
+@use "../../styles/vars" as *;
+
+.filter{
+    padding: 0.5rem;
+    border: none;
+    border-radius: $btn-radius;
+    color: $dark-gray;
+    transition: all 0.2s ease;
+
+    &.primary {
+        background-color: $white;
+        border: 2px solid $gray;
+        cursor: pointer;
+
+        &:hover{
+            border-color: $primary;
+
+            &, a {
+                color: $primary;
+            }
+        }
+
+        &.selected{
+            background-color: $primary;
+            color: $white;
+            box-shadow: $shadow;
+        }
+    }
+
+    &.secondary {
+        background-color: $gray;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $gray-2;
+        }
+
+        &.selected{
+            background-color: $secondary;
+            box-shadow: $shadow;
+
+            &, a {
+                color: $white;
+            }
+        }
+    }
+
+    &.primary-close {
+        background-color: $primary-light;
+        color: $primary;
+
+        button {
+            color: $primary;
+        }
+    }
+
+    &.secondary-close {
+        background-color: $secondary-light;
+        color: $secondary;
+
+        button {
+            color: $secondary;
+        }
+    }
+
+    &.primary-close, &.secondary-close {
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1rem 0.5rem;
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding-right: 0;
+        }
+    }
+}
