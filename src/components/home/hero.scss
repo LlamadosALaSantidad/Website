@@ -1,0 +1,88 @@
+@use "../../styles/vars" as *;
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $terciary;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .badge {
+        border-radius: $card-radius;
+        padding: 0.3rem 1rem;
+        font-weight: 600;
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); 
+        color: $primary;
+        box-shadow: $shadow;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+        max-width: 40rem;
+
+        span {
+            background-image: $primary-gradient-linear;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+        max-width: 35rem;
+        font-weight: 200;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        button {
+            width: 11rem;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hero {
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    .hero {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .hero {
+        height: 80vh;
+
+        .buttons {
+            flex-direction: row;
+        }
+    }
+}

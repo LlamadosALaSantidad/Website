@@ -1,0 +1,76 @@
+@use "../../styles/vars" as *;
+
+.featured_saints {
+	background-color: $terciary;
+	text-align: center;
+	padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	.featured_header {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        width: 100%;
+
+		.featured_title {
+			h2, h3 {
+				margin: 0;
+			}
+
+            h3 {
+                color: $secondary;
+                font-family: $text;
+                text-transform: uppercase;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+		}
+
+        .featured_link {
+            color: $primary;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+	}
+
+	.featured_saints_grid {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 22rem));
+		gap: 2rem;
+        justify-content: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+    .featured_saints {
+        padding: 7rem 10rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+	.featured_saints {
+		text-align: left;
+        align-items: start;
+
+        .featured_header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        .featured_saints_grid {
+            justify-content: start;
+        }
+	}
+}

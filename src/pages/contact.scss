@@ -1,0 +1,114 @@
+@use "../styles/vars" as *;
+
+.contact {
+    .contact_header {
+        background-color: $dark-blue;
+        color: $white;
+        width: 100%;
+        padding: 4rem;
+
+        h1 {
+            margin: 0;
+            font-size: 3.2rem;
+        }
+
+        p {
+            max-width: 35rem;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+
+    .contact_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+        padding: 5rem;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 75rem;
+
+        .contact_whatsapp, .contact_community {
+            border-radius: $card-radius;
+            padding: 2rem;
+            border: 1px solid $gray-2;
+            box-shadow: $shadow;
+            max-width: 30rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+
+            h3 {
+                font-size: 1.5rem;
+                margin: 0;
+            }
+
+            p {
+                max-width: 25rem;
+            }
+
+            button {
+                width: 100%;
+                max-width: 16rem;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+        }
+
+        .contact_whatsapp {
+            background-color: #FFFBF7;
+
+            svg {
+                background-color: $white;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                overflow: visible;
+                padding: 1rem;
+                box-shadow: $shadow;
+                color: #20BD5A;
+            }
+        }
+    }
+
+    .contact_institutional {
+        border-top: 1px solid $gray-2;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h3 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contact {
+        .contact_content {
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact {}
+}

@@ -1,0 +1,186 @@
+@use "../styles/vars" as *;
+
+.saints {
+    .page_header {
+        width: 100%;
+        background-color: $primary-light;
+        padding: 4rem;
+
+        h1 {
+            margin: 0;
+            font-size: 3.2rem;
+        }
+
+        p {
+            max-width: 35rem;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+
+    .page_search {
+        margin-top: 5rem;
+        width: 100%;
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: $card-radius;
+            background-color: $white;
+            box-shadow: $shadow;
+            padding: 1rem;
+            max-width: 60rem;
+
+            .search_term {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    background-color: $gray;
+                    border: 1px solid $dark-gray;
+                    padding: 1rem;
+                    border-radius: $btn-radius;
+                }
+            }
+
+            .search_filters {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .search_categories, .search_tags {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .filter_header {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-weight: 700;
+
+                        svg {
+                            width: 1.8rem;
+                            height: 1.8rem;
+                        }
+                    }
+
+                    .filter_items {
+                        display: flex;
+                        gap: 1rem;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .search_categories svg {
+                    color: $primary;
+                }
+
+                .search_tags {
+                    border-top: 1px solid $gray-2;
+                    padding: 1rem;
+
+                    svg {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            .search_summary {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+                align-items: center;
+                padding: 0 1rem;
+                border-top: 1px solid $gray-2;
+                padding-top: 1rem;
+
+                .search_summary_content {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    div {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .page_results {
+        display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 22rem));
+		gap: 2rem;
+        justify-content: center;
+        padding: 5rem;
+    }
+
+    .page_void {
+        padding: 5rem;
+    }
+}
+
+@media screen and (min-width: 670px) {
+    .saints {
+        .page_search form {
+            .search_summary {
+                flex-direction: row;
+                gap: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .saints {
+        .page_search form {
+            padding: 2rem;
+        }
+
+        .page_results {
+            justify-content: start;
+        }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .saints {
+        .page_search form {
+            .search_filters {
+                flex-direction: row;
+
+                .search_categories, .search_tags {
+                    align-items: start;
+
+                    .filter_items {
+                        justify-content: start;
+                    }
+                }
+
+                .search_tags {
+                    border-left: 1px solid $gray-2;
+                    border-top: none;
+                    padding: 0;
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .saints {
+        .page_results, .page_void {
+            padding: 5rem 10rem;
+        }
+    }
+}

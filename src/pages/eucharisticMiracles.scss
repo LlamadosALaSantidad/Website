@@ -1,0 +1,104 @@
+@use "../styles/vars" as *;
+
+.eucharisticMiracles {
+    .page_header {
+        width: 100%;
+        background-color: $secondary-light;
+        padding: 4rem;
+
+        h1 {
+            margin: 0;
+            font-size: 3.2rem;
+        }
+
+        p {
+            max-width: 35rem;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+
+    .page_search {
+        margin-top: 5rem;
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: $card-radius;
+            background-color: $white;
+            box-shadow: $shadow;
+            padding: 1rem;
+            max-width: 50rem;
+
+            .search_term {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    background-color: $gray;
+                    border: 1px solid $dark-gray;
+                    padding: 1rem;
+                    border-radius: $btn-radius;
+                }
+            }
+
+            .filter_items {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+    .page_results {
+        display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		gap: 2rem;
+        justify-content: center;
+        padding: 5rem;
+    }
+
+    .page_void {
+        padding: 5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .eucharisticMiracles {
+        .page_search form {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .search_term {
+                max-width: 20rem;
+            }
+
+            .filter_items {
+                flex-wrap: nowrap;
+            }
+        }
+
+        .page_results {
+            justify-content: start;
+        }
+
+        .card {
+            max-width: calc(50vw - 12rem);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .eucharisticMiracles {
+        .page_results, .page_void {
+            padding: 5rem 10rem;
+        }
+    }
+}

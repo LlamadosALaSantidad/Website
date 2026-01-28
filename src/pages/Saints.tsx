@@ -6,6 +6,7 @@ import type { SaintCategory } from "../types/tag";
 import { SAINTS_CATEGORIES } from "../constants/tags";
 import Filter from "../components/ui/Filter";
 import Button from "../components/ui/Button";
+import "./saints.scss";
 
 function Saints() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -62,14 +63,13 @@ function Saints() {
                         <div className="search_filters">
                             <div className="search_categories">
                                 <div className="filter_header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" stroke-width="1"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" strokeWidth="1"/></svg>
                                     <span>Categoría</span>
                                 </div>
                                 <div className="filter_items">
                                     <Filter
                                         variant="primary"
                                         state={`${selectedCategory === null ? 'selected' : ''}`}
-                                        type="button"
                                         onClick={() => setSelectedCategory(null)}
                                     >
                                         Todas
@@ -78,7 +78,6 @@ function Saints() {
                                         <Filter
                                             variant="primary"
                                             state={`${selectedCategory === category ? 'selected' : ''}`}
-                                            type="button"
                                             key={category}
                                             onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
                                         >
@@ -89,14 +88,13 @@ function Saints() {
                             </div>
                             <div className="search_tags">
                                 <div className="filter_header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(3 3)"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.914.5H12.5a2 2 0 0 1 2 2v3.586a1 1 0 0 1-.293.707l-6.793 6.793a2 2 0 0 1-2.828 0l-3.172-3.172a2 2 0 0 1 0-2.828L8.207.793A1 1 0 0 1 8.914.5" stroke-width="1"/><circle cx="12" cy="3" r="1" fill="currentColor"/></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fillRule="evenodd" transform="translate(3 3)"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M8.914.5H12.5a2 2 0 0 1 2 2v3.586a1 1 0 0 1-.293.707l-6.793 6.793a2 2 0 0 1-2.828 0l-3.172-3.172a2 2 0 0 1 0-2.828L8.207.793A1 1 0 0 1 8.914.5" strokeWidth="1"/><circle cx="12" cy="3" r="1" fill="currentColor"/></g></svg>
                                     <span>Etiquetas</span>
                                 </div>
                                 <div className="filter_items">
                                     <Filter
                                         variant="secondary"
                                         state={`${selectedTag === null ? 'selected' : ''}`}
-                                        type="button"
                                         onClick={() => setSelectedTag(null)}
                                     >
                                         Todas
@@ -105,7 +103,6 @@ function Saints() {
                                         <Filter
                                             variant="secondary"
                                             state={`${selectedTag === tag ? 'selected' : ''}`}
-                                            type="button"
                                             key={tag}
                                             onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
                                         >
@@ -117,19 +114,21 @@ function Saints() {
                         </div>
                         {(selectedCategory || selectedTag) && (
                             <div className="search_summary">
-                                <span>Filtros activos:</span>
-                                {selectedCategory && (
-                                    <Filter variant="primary-close">
-                                        {selectedCategory}
-                                        <button onClick={() => setSelectedCategory(null)}>×</button>
-                                    </Filter>
-                                )}
-                                {selectedTag && (
-                                    <Filter variant="secondary-close">
-                                        {selectedTag}
-                                        <button onClick={() => setSelectedTag(null)}>×</button>
-                                    </Filter>
-                                )}
+                                <div className="search_summary_content">
+                                    <span>Filtros activos:</span>
+                                    {selectedCategory && (
+                                        <Filter variant="primary-close">
+                                            {selectedCategory}
+                                            <button onClick={() => setSelectedCategory(null)}>×</button>
+                                        </Filter>
+                                    )}
+                                    {selectedTag && (
+                                        <Filter variant="secondary-close">
+                                            {selectedTag}
+                                            <button onClick={() => setSelectedTag(null)}>×</button>
+                                        </Filter>
+                                    )}
+                                </div>
                                 <Button
                                     variant="error"
                                     onClick={() => { setSelectedCategory(null); setSelectedTag(null); setSearchTerm('') }}

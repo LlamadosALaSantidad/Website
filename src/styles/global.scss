@@ -10,9 +10,13 @@ body {
 	font-family: $text;
 	text-align: center;
 	font-weight: 300;
+	overflow-x: hidden;
 }
 
-a, button, input, ::placeholder {
+a,
+button,
+input,
+::placeholder {
 	font-family: $text;
 }
 
@@ -34,6 +38,10 @@ a {
 
 // All
 header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 999;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -41,13 +49,60 @@ header {
 	height: 5rem;
 	width: 100%;
 	font-family: $title;
+	background-color: rgb(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 
-	.header_menu .menu {
-		display: flex;
-		flex-direction: row;
+	.navbar_toggle {
+		background-color: transparent;
+		border: none;
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
 
-		li {
-			list-style: none;
+		.hamburger {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.header_menu {
+		.close_nav {
+			background-color: transparent;
+			border: none;
+			width: 2rem;
+			height: 2rem;
+			padding: 0;
+
+			svg {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		.menu {
+			display: flex;
+			flex-direction: row;
+
+			li {
+				list-style: none;
+			}
 		}
 	}
 }
@@ -89,7 +144,7 @@ header {
 					font-weight: 500;
 				}
 
-                &:hover {
+				&:hover {
 					color: $secondary;
 				}
 			}
@@ -105,40 +160,69 @@ header {
 		}
 
 		.header_menu {
-			display: none;
+			position: fixed;
+			inset: 0;
+			width: 85%;
+			height: 100vh;
+			background-color: $white;
+			box-shadow: $dark-shadow;
+			z-index: 1000;
+			transform: translateX(-100%);
+			transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
 			&.active {
-				display: block;
-				position: fixed;
-				inset: 0;
-				width: 90%;
+				transform: translateX(0);
+			}
+
+			.close_nav {
+				position: absolute;
+				right: 1.5rem;
+				top: 1.5rem;
+				cursor: pointer;
+			}
+
+			.menu {
+				flex-direction: column;
+				padding: 5rem 2rem;
 				height: 100%;
+				margin: 0;
 				background-color: $white;
-				box-shadow: $shadow;
 
-				.close_nav {
-					position: absolute;
-					right: 0;
-					top: 0;
-				}
+				li {
+					border-bottom: 1px solid $gray;
 
-				.menu {
-					flex-direction: column;
-					gap: 2rem;
+					a {
+                        display: block;
+                        padding: 1rem 0;
+                        font-size: 1.2rem;
+                    }
 
-					li {
-						border-bottom: 1px solid $gray;
+					&:last-child {
+						border-bottom: none;
 					}
 				}
 			}
+
+			&::before {
+				content: "";
+				position: fixed;
+				inset: 0;
+				width: 100vw;
+				height: 100vh;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: -1;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.4s ease;
+			}
+
+			&.active::before {
+				opacity: 1;
+				pointer-events: all;
+				left: 100%;
+			}
 		}
 	}
-}
-
-/* ------- MAIN ------- */
-
-main {
-	margin-top: 5rem;
 }
 
 /* ------- SOCIAL BUTTONS ------- */
@@ -174,10 +258,16 @@ main {
 .float {
 	position: fixed;
 	bottom: 2rem;
-	right: 2rem;
+	right: 0;
+	border-radius: $card-radius 0 0 $card-radius;
+	box-shadow: $dark-shadow;
+	padding: 1rem;
+	background-color: $white;
 
 	.float_social {
 		flex-direction: column;
+		padding: 0;
+    	margin: 0;
 	}
 }
 
@@ -193,11 +283,16 @@ footer .footer_us .footer_social {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: background-color 0.2s ease-in;
 
 		a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+
+		&:hover {
+			background-color: #2a3039;
 		}
 	}
 }
@@ -206,21 +301,21 @@ footer .footer_us .footer_social {
 
 footer {
 	display: grid;
-    grid-template-columns: 30% 30% 40%;
+	grid-template-columns: 30% 30% 40%;
 	width: 100%;
 	text-align: left;
 	background-color: $gray;
 	padding: 3rem 2rem;
 	gap: 1rem;
 
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 640px) {
 		grid-template-columns: 100%;
 		gap: 2rem;
 	}
 
 	h3 {
 		margin: 0;
-        margin-bottom: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	ul {
@@ -231,7 +326,7 @@ footer {
 	.foooter_nav .menu {
 		li {
 			list-style: none;
-            transition: padding 0.2s ease-in;
+			transition: padding 0.2s ease-in;
 
 			a {
 				text-decoration: none;
@@ -247,9 +342,9 @@ footer {
 				}
 			}
 
-            &:hover {
-                padding-left: 1rem;
-            }
+			&:hover {
+				padding-left: 1rem;
+			}
 		}
 	}
 

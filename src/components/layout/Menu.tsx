@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { PATHS } from "../../constants/routes";
 
-function Menu() {
+interface MenuProps {
+    closeNav: () => void;
+}
+
+function Menu({closeNav} : MenuProps) {
     return (
         <ul className="menu">
-            <li>
+            <li onClick={closeNav}>
                 <NavLink
                     to={PATHS.HOME}
                     end
@@ -13,7 +17,7 @@ function Menu() {
                     Inicio
                 </NavLink>
             </li>
-            <li>
+            <li onClick={closeNav}>
                 <NavLink
                     to={`${PATHS.SAINTS}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}
@@ -21,7 +25,7 @@ function Menu() {
                     Santos
                 </NavLink>
             </li>
-            <li>
+            <li onClick={closeNav}>
                 <NavLink
                     to={`${PATHS.MIRACLES}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}
@@ -29,7 +33,7 @@ function Menu() {
                     Milagros Eucarísticos
                 </NavLink>
             </li>
-            <li>
+            <li onClick={closeNav}>
                 <NavLink
                     to={`${PATHS.CONTACT}`}
                     className={({ isActive }) => isActive ? "active-link" : ""}

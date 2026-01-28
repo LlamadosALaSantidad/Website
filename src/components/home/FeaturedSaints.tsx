@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import saintsData from "../../content/saints.json";
 import Card from "../cards/Card";
 import { PATHS } from "../../constants/routes";
+import "./featuredSaints.scss";
 
 function FeaturedSaints() {
     const saints = saintsData.saints;
@@ -14,9 +15,9 @@ function FeaturedSaints() {
                     <h3>Modelos de Fe</h3>
                     <h2>Santos Destacados</h2>
                 </div>
-                <Link to={PATHS.SAINTS}>
+                <Link to={PATHS.SAINTS} className="featured_link">
                     <span>Ver todos</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m13.5 6.497l4 4.002l-4 4.001m-9-4h13" stroke-width="1"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="m13.5 6.497l4 4.002l-4 4.001m-9-4h13" strokeWidth="1"/></svg>
                 </Link>
             </div>
             <article className="featured_saints_grid">

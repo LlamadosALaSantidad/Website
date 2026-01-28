@@ -3,7 +3,7 @@ import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import FeaturedSaints from "../components/home/FeaturedSaints";
 import FeaturedMiracles from "../components/home/FeaturedMiracles";
-import Newsletter from "../components/home/Newsletter";
+import Community from "../components/home/Community";
 
 function Home() {
     return (
@@ -17,7 +17,7 @@ function Home() {
                 <About />
                 <FeaturedSaints />
                 <FeaturedMiracles />
-                <Newsletter />
+                <Community />
             </main>
         </>
     );

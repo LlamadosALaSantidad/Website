@@ -1,10 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { SOCIAL_LINKS } from "../constants/social-links";
 import Button from "../components/ui/Button";
-import { NewsletterIcon, WhatsAppIcon } from "../components/icons/SocialIcons";
+import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "../components/icons/SocialIcons";
+import "./contact.scss";
 
 function Contact() {
     const WHATSAPP_LINK = SOCIAL_LINKS.find((link) => link.name === "WhatsApp")?.url || "";
+    const FACEBOOK_LINK = SOCIAL_LINKS.find((link) => link.name === "Facebook")?.url || "";
+    const INSTAGRAM_LINK = SOCIAL_LINKS.find((link) => link.name === "Instagram")?.url || "";
 
     return (
         <>
@@ -26,15 +29,21 @@ function Contact() {
                         <Button variant="ws"><a href={WHATSAPP_LINK} target="_blank">Abrir Chat</a></Button>
                     </article>
 
-                    <article className="contact_newsletter">
-                        <NewsletterIcon />
-                        <h3>Newsletter</h3>
-                        <p>Déjanos tu correo para recibir las últimas actualizaciones.</p>
-                        <form action="">
-                            <label htmlFor="newsletter_contact">Correo Electrónico</label>
-                            <input type="email" name="email" id="newsletter_contact"/>
-                            <Button variant="primary" type="submit">Suscribirse</Button>
-                        </form>
+                    <article className="contact_community">
+                        <h3>Únete a la Comunidad</h3>
+                        <p>Mantente actualizado con las últimas historias a través de nuestras redes sociales.</p>
+                        <Button variant="fb">
+                            <a href={FACEBOOK_LINK} target="_blank">
+                                <FacebookIcon />
+                                <span>Grupo de Facebook</span>
+                            </a>
+                        </Button>
+                        <Button variant="ig">
+                            <a href={INSTAGRAM_LINK} target="_blank">
+                                <InstagramIcon />
+                                <span>SInstagram</span>
+                            </a>
+                        </Button>
                     </article>
                 </section>
 

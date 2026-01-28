@@ -6,6 +6,7 @@ import Card from "../components/cards/Card";
 import { MIRACLES_REGIONS } from "../constants/tags";
 import Filter from "../components/ui/Filter";
 import Button from "../components/ui/Button";
+import "./eucharisticMiracles.scss";
 
 function EucharisticMiracles() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -56,7 +57,6 @@ function EucharisticMiracles() {
                                     <Filter
                                         variant="primary"
                                         state={`${selectedRegion === null ? 'selected' : ''}`}
-                                        type="button"
                                         onClick={() => setSelectedRegion(null)}
                                     >
                                         Todas
@@ -65,7 +65,6 @@ function EucharisticMiracles() {
                                         <Filter
                                             variant="primary"
                                             state={`${selectedRegion === region ? 'selected' : ''}`}
-                                            type="button"
                                             key={region}
                                             onClick={() => setSelectedRegion(selectedRegion === region ? null : region)}
                                         >

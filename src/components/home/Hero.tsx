@@ -2,6 +2,7 @@ import { SITE_INFO } from "../../constants/site-info";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../constants/routes";
 import Button from "../ui/Button";
+import "./hero.scss";
 
 function Hero() {
     return (
