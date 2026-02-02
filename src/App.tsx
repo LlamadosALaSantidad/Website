@@ -1,15 +1,13 @@
 import { RouterProvider } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { router } from "./router/index";
 import "./styles/global.scss"
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
     return (
-        <>
-            <HelmetProvider>
-                <RouterProvider router={router} />
-            </HelmetProvider>
-        </>
+        <HelmetProvider>
+            <RouterProvider router={router} />
+        </HelmetProvider>
     )
 }
 

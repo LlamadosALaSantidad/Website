@@ -17,6 +17,10 @@ $primary-gradient-linear: linear-gradient(90deg,rgba(4, 222, 222, 1) 0%, rgba(23
 $secondary-gradient-linear: linear-gradient(90deg,rgba(45, 114, 227, 1) 0%, rgba(4, 222, 222, 1) 50%, rgba(245, 104, 223, 1) 100%);
 $primary-gradient-radial: radial-gradient(circle,rgba(245, 104, 223, 1) 0%, rgba(236, 8, 193, 1) 50%, rgba(4, 222, 222, 1) 100%);
 $secondary-gradient-radial: radial-gradient(circle,rgba(245, 104, 223, 1) 0%, rgba(4, 222, 222, 1) 50%, rgba(45, 114, 227, 1) 100%);
+$blue-gradient: linear-gradient(#2D72E3, #2BADE5, $primary);
+$blue-gradient-2: linear-gradient($primary, #2BADE5, #2D72E3);
+$pink-gradient: linear-gradient(#DE17A5, #EC08C1, $secondary);
+$pink-gradient-2: linear-gradient($secondary, #EC08C1, #DE17A5);
 $btn-radius: 0.75rem;
 $card-radius: 1rem;
 $title: "Edu SA Hand", cursive;

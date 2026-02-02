@@ -1,0 +1,292 @@
+@use "../styles/vars" as *;
+
+.saintDetail {
+	.saint_banner {
+		min-height: 43vh;
+		text-align: left;
+		padding: 5rem;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+		color: $white;
+
+		a {
+			color: $white;
+			margin-bottom: 1rem;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			svg {
+				transform: rotate(180deg);
+				transition: margin 0.2s ease;
+			}
+		}
+
+		button {
+			font-weight: 700;
+			font-size: 0.9rem;
+		}
+
+		.saint_details {
+			display: flex;
+			gap: 1rem;
+
+			.saint_detail {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+
+				.day_icon {
+					color: $primary;
+				}
+
+				.location_icon {
+					color: $secondary;
+				}
+			}
+		}
+	}
+
+	.saint_content {
+		padding: 2rem;
+		background-color: $gray;
+		gap: 2rem;
+		width: 100%;
+
+		.saint_nav,
+		.saint_history,
+		.saint_extra {
+			background-color: $white;
+			border-radius: $card-radius;
+			box-shadow: $shadow;
+			padding: 2rem;
+		}
+
+		.saint_nav {
+			display: none;
+		}
+
+		.saint_history, .saint_md {
+			text-align: left;
+
+			.saint_description {
+				border-left: 5px solid $secondary;
+				padding-left: 1rem;
+				font-family: $title;
+				font-size: 1.1rem;
+				vertical-align: middle;
+			}
+
+			.md_h2_icon svg {
+				color: $primary;
+				margin-right: 0.5rem;
+			}
+
+			iframe {
+				border-radius: $card-radius;
+				width: 100%;
+				margin-bottom: 2rem;
+			}
+		}
+
+		.saint_links {
+			border-top: 1px solid $gray-2;
+			display: grid;
+			grid-template-columns: 100%;
+			padding-top: 2rem;
+			gap: 1.5rem;
+
+			.saint_miracles_card,
+			.saint_experiences_card {
+				border-radius: $card-radius;
+				padding: 1rem 1.5rem;
+				color: $white;
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+
+				h3 {
+					margin: 0;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					inset: 0;
+					z-index: -1;
+					opacity: 0;
+					transition: opacity 0.4s ease;
+				}
+
+				&:hover::before {
+					opacity: 1;
+				}
+
+				button {
+					border: none;
+					border-radius: $btn-radius;
+					padding: 0.4rem 1rem;
+					font-size: 0.9rem;
+
+					a {
+						font-family: $title;
+						color: $white;
+						font-weight: 500;
+					}
+				}
+			}
+
+			.saint_miracles_card {
+				background: $blue-gradient;
+
+				&::before {
+					background: $blue-gradient-2;
+				}
+
+				button {
+					background-color: rgb(43, 173, 229, 0.2);
+					transition: background-color 0.2s ease;
+					border: 1px solid #2bade5;
+				}
+
+				&:hover button {
+					background-color: $white;
+
+					a {
+						color: $primary;
+					}
+				}
+			}
+
+			.saint_experiences_card {
+				background: $pink-gradient;
+
+				&::before {
+					background: $pink-gradient-2;
+				}
+
+				button {
+					background-color: rgb(236, 8, 193, 0.2);
+					transition: background-color 0.2s ease;
+					border: 1px solid #ec08c1;
+				}
+
+				&:hover button {
+					background-color: $white;
+
+					a {
+						color: $secondary;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.saintDetail {
+		.saint_banner a:hover svg {
+			margin-right: 1rem;
+		}
+
+		.saint_content {
+			.saint_links {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.saintDetail {
+		.saint_content {
+			display: grid;
+			grid-template-columns: minmax(18rem, 22rem) 1fr;
+			padding: 5rem;
+
+			.saint_nav {
+				display: block;
+				position: sticky;
+				top: 7rem;
+				height: fit-content;
+				text-align: left;
+				width: fit-content;
+
+				h3,
+				h4 {
+					margin: 0;
+					border-bottom: 1px solid $gray-2;
+					padding-bottom: 0.5rem;
+				}
+
+				h4 {
+					padding-top: 1rem;
+				}
+
+				ul {
+					margin: 0;
+					padding: 0;
+					padding: 1rem 0;
+
+					li {
+						list-style: none;
+						transition: border 0.2s ease;
+						padding-left: 1rem;
+
+						a {
+							transition: color 0.2s ease;
+						}
+
+						&:hover {
+							border-left: 2px solid $primary;
+
+							a {
+								color: $primary;
+							}
+						}
+					}
+				}
+
+				.saint_nav_tags {
+					padding-top: 1rem;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 1rem;
+
+					span {
+						background-color: $gray;
+						border-radius: $btn-radius;
+						padding: 0.5rem 0.8rem;
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
+	.saintDetail {
+		.saint_content {
+			padding: 4rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+	.saintDetail {
+		.saint_content {
+			padding: 3rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.saintDetail {
+		.saint_content {
+			padding: 5rem 10rem;
+		}
+	}
+}

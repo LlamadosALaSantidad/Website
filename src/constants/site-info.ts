@@ -1,6 +1,6 @@
 export const SITE_INFO = {
 	name: "Llamados a la Santidad",
-	slogan: "Viviendo la fe con esperanza y amor.",
+	slogan: "Tras sus huellas.",
 	description:
-		"Un espacio dedicado a difundir la vida de los santos y los milagros eucarísticos."
+		'"Jesús nos ha llamado a seguirlo y nos ha dejado de rastro sus huellas."'
 };

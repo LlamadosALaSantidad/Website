@@ -8,8 +8,7 @@
 			"name": "San Francisco de Asís",
 			"description": "Fundador de la Orden Franciscana y ejemplo de vida en pobreza y humildad.",
 			"location": "Italia",
-			"date": "10-04",
-			"publishedAt": "2024-10-04",
+			"date": "4 de Octubre",
 			"image": "/images/saints/san-francisco-de-asis/cover.webp",
 			"categories": ["Confesores"],
 			"tags": ["Fundadores", "Pobreza"]
@@ -21,7 +20,6 @@
 			"description": "Religiosa dedicada al servicio de los más pobres entre los pobres.",
 			"location": "India",
 			"date": "09-05",
-			"publishedAt": "2024-09-05",
 			"image": "/images/saints/santa-teresa-de-calcuta/cover.webp",
 			"categories": ["Santas"],
 			"tags": ["Fundadores", "Pobreza"]

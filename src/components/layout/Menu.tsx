@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { PATHS } from "../../constants/routes";
 
 interface MenuProps {
-    closeNav: () => void;
+    closeNav?: () => void;
 }
 
 function Menu({closeNav} : MenuProps) {

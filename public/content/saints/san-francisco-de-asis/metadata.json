@@ -1,0 +1,45 @@
+{
+	"id": "san-francisco-de-asis",
+	"slug": "san-francisco-de-asis",
+	"name": "San Francisco de Asís",
+
+	"feastDay": "4 de Octubre",
+
+	"location": {
+		"city": "Asís",
+		"country": "Italia"
+	},
+
+	"category": "Confesores",
+	"tags": ["Fundadores", "Pobreza"],
+
+	"description": "Fundador de la Orden Franciscana y ejemplo radical de pobreza evangélica.",
+
+	"coverImage": "/images/saints/san-francisco-de-asis/cover.webp",
+	"portraitImage": "/images/saints/san-francisco-de-asis/portrait.webp",
+
+	"audio": {
+		"exists": true,
+		"src": "/content/saints/san-francisco-de-asis/audio.mp3"
+	},
+
+	"related": {
+		"miraclesPage": true,
+		"testimoniesPage": true
+	},
+
+	"audioMiracles": {
+		"exists": false,
+		"src": "/content/saints/san-francisco-de-asis/miracles.mp3"
+	},
+
+	"audioTestimonies": {
+		"exists": false,
+		"src": "/content/saints/san-francisco-de-asis/testimonies.mp3"
+	},
+
+	"seo": {
+		"title": "San Francisco de Asís | Llamados a la Santidad",
+		"description": "Vida, conversión, estigmas y espiritualidad de San Francisco de Asís."
+	}
+}

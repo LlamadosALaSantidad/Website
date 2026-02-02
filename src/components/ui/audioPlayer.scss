@@ -1,0 +1,69 @@
+@use "../../styles/vars" as *;
+
+.audioPlayer {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #fffbf7;
+	border-radius: $card-radius;
+	border: 1px solid $terciary;
+	padding: 1rem 2rem;
+
+	.audioPlayer_volume {
+		background-color: $primary;
+		color: $white;
+		padding: 0.5rem;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		overflow: visible;
+	}
+
+	.audioPlayer_container {
+		width: 100%;
+
+        p {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            font-family: $title;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+	}
+
+	.audioPlayer_bar {
+		background-color: $dark-blue;
+		color: white;
+		border-radius: $card-radius;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+        padding: 0.5rem 1rem;
+        overflow: hidden;
+        gap: 0.5rem;
+
+		button {
+			background-color: transparent;
+			border: none;
+
+			svg {
+				color: $white;
+
+                path {
+                    fill: $white;
+                }
+			}
+		}
+
+        input {
+            width: 100%;
+        }
+
+        .time_display {
+            flex-shrink: 0;
+            width: fit-content;
+            font-size: 0.9rem;
+        }
+	}
+}

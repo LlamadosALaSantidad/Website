@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
-import saintsData from "../../content/saints.json";
 import Card from "../cards/Card";
 import { PATHS } from "../../constants/routes";
 import "./featuredSaints.scss";
+import type Saint from "../../types/saint";
+import { useEffect, useState } from "react";
 
 function FeaturedSaints() {
-    const saints = saintsData.saints;
+    const [saints, setSaints] = useState<Saint[]>([]);
+
+    useEffect(() => {
+        fetch("/content/saints.json")
+            .then(res => res.json())
+            .then(data => setSaints(data.saints));
+    }, []);
+
     const featuredSaints = saints.slice(0, 3);
 
     return(

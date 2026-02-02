@@ -1,0 +1,29 @@
+{
+	"id": "milagro-eucaristico-de-lanciano",
+	"slug": "milagro-eucaristico-de-lanciano",
+	"name": "Milagro Eucarístico de Lanciano",
+
+	"day": "2024-08-15",
+
+	"location": {
+		"city": "Lanciano",
+		"country": "Italia"
+	},
+
+	"region": "Europa",
+
+	"description": "La hostia se transformó en carne y el vino en sangre visible.",
+
+	"coverImage": "/images/eucharistic-miracles/milagro-eucaristico-de-lanciano/cover.webp",
+	"portraitImage": "/images/eucharistic-miracles/milagro-eucaristico-de-lanciano/portrait.webp",
+
+	"audio": {
+		"exists": true,
+		"src": "/content/eucharistic-miracles/milagro-eucaristico-de-lanciano/audio.mp3"
+	},
+
+	"seo": {
+		"title": "Milagro Eucarístico de Lanciano | Llamados a la Santidad",
+		"description": "La Ciencia ha dado una respuesta segura y exhaustiva acerca de la autenticidad del Milagro."
+	}
+}

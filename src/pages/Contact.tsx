@@ -13,7 +13,7 @@ function Contact() {
         <>
             <Helmet>
                 <title>Contacto | Llamados a la Santidad</title>
-                <meta name="description" content="Ponte en contacto con nosotros para dudas, sugerencias o unirte a la comunidad." />
+                <meta key="description" name="description" content="Ponte en contacto con nosotros para dudas, sugerencias o unirte a la comunidad." />
             </Helmet>
             <main className="contact">
                 <section className="contact_header">

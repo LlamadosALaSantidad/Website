@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import miraclesData from "../../content/miracles.json";
 import Card from "../cards/Card";
 import { PATHS } from "../../constants/routes";
 import "./featuredMiracles.scss"
+import { useEffect, useState } from "react";
+import type Miracle from "../../types/miracle";
 
 function FeaturedMiracles() {
-    const miracles = miraclesData.miracles;
+    const [miracles, setMiracles] = useState<Miracle[]>([]);
+
+    useEffect(() => {
+        fetch("/content/miracles.json")
+            .then(res => res.json())
+            .then(data => setMiracles(data.miracles))
+            .catch(console.error);
+    }, []);
+
     const featuredMiracles = miracles.slice(0, 3);
 
     return(

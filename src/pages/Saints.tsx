@@ -1,41 +1,52 @@
 import { Helmet } from "react-helmet-async";
-import { useMemo, useState } from "react";
-import saintsData from "../content/saints.json"
+import { useEffect, useMemo, useState } from "react";
 import Card from "../components/cards/Card";
 import type { SaintCategory } from "../types/tag";
 import { SAINTS_CATEGORIES } from "../constants/tags";
 import Filter from "../components/ui/Filter";
 import Button from "../components/ui/Button";
 import "./saints.scss";
+import type Saint from "../types/saint";
 
 function Saints() {
+    const [saints, setSaints] = useState<Saint[]>([]);
+
+    useEffect(() => {
+        fetch("/content/saints.json")
+            .then(res => res.json())
+            .then(data => setSaints(data.saints))
+            .catch(console.error);
+    }, []);
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<SaintCategory | null>(null);
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
     const availableTags = useMemo(() => {
         const tags = new Set<string>();
-        saintsData.saints.forEach(saint => saint.tags.forEach(tag => tags.add(tag)));
+        saints.forEach(saint =>
+            saint.tags.forEach(tag => tags.add(tag))
+        );
         return Array.from(tags).sort();
-    }, []);
+    }, [saints]);
 
     const filteredSaints = useMemo(() => {
-        return saintsData.saints.filter(saint => {
+        return saints.filter(saint => {
             const searchLower = searchTerm.toLowerCase();
-            
+
             const matchesSearch =
                 saint.name.toLowerCase().includes(searchLower) ||
                 saint.description.toLowerCase().includes(searchLower);
 
-            const matchesCategory = !selectedCategory || 
-                saint.categories.includes(selectedCategory);
+            const matchesCategory =
+                !selectedCategory || saint.categories.includes(selectedCategory);
 
-            const matchesTag = !selectedTag || 
-                saint.tags.includes(selectedTag);
+            const matchesTag =
+                !selectedTag || saint.tags.includes(selectedTag);
 
             return matchesSearch && matchesCategory && matchesTag;
         });
-    }, [searchTerm, selectedCategory, selectedTag]);
+    }, [saints, searchTerm, selectedCategory, selectedTag]);
 
     return (
         <>
@@ -63,7 +74,7 @@ function Saints() {
                         <div className="search_filters">
                             <div className="search_categories">
                                 <div className="filter_header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" strokeWidth="1"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M4.5 7.5h12m-10 3h8m-6 3h4" strokeWidth="1" /></svg>
                                     <span>Categoría</span>
                                 </div>
                                 <div className="filter_items">
@@ -88,7 +99,7 @@ function Saints() {
                             </div>
                             <div className="search_tags">
                                 <div className="filter_header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fillRule="evenodd" transform="translate(3 3)"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M8.914.5H12.5a2 2 0 0 1 2 2v3.586a1 1 0 0 1-.293.707l-6.793 6.793a2 2 0 0 1-2.828 0l-3.172-3.172a2 2 0 0 1 0-2.828L8.207.793A1 1 0 0 1 8.914.5" strokeWidth="1"/><circle cx="12" cy="3" r="1" fill="currentColor"/></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fillRule="evenodd" transform="translate(3 3)"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="M8.914.5H12.5a2 2 0 0 1 2 2v3.586a1 1 0 0 1-.293.707l-6.793 6.793a2 2 0 0 1-2.828 0l-3.172-3.172a2 2 0 0 1 0-2.828L8.207.793A1 1 0 0 1 8.914.5" strokeWidth="1" /><circle cx="12" cy="3" r="1" fill="currentColor" /></g></svg>
                                     <span>Etiquetas</span>
                                 </div>
                                 <div className="filter_items">
