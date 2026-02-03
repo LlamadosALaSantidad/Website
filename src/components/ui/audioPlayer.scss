@@ -2,13 +2,14 @@
 
 .audioPlayer {
 	display: flex;
+	flex-direction: column;
 	gap: 1rem;
 	align-items: center;
-	justify-content: space-around;
 	background-color: #fffbf7;
 	border-radius: $card-radius;
 	border: 1px solid $terciary;
-	padding: 1rem 2rem;
+	padding: 1rem;
+	text-align: center;
 
 	.audioPlayer_volume {
 		background-color: $primary;
@@ -23,13 +24,13 @@
 	.audioPlayer_container {
 		width: 100%;
 
-        p {
-            margin: 0;
-            margin-bottom: 0.5rem;
-            font-family: $title;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
+		p {
+			margin: 0;
+			margin-bottom: 0.5rem;
+			font-family: $title;
+			font-weight: 500;
+			font-size: 0.9rem;
+		}
 	}
 
 	.audioPlayer_bar {
@@ -39,9 +40,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-        padding: 0.5rem 1rem;
-        overflow: hidden;
-        gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		overflow: hidden;
+		gap: 0.5rem;
 
 		button {
 			background-color: transparent;
@@ -51,21 +52,35 @@
 			svg {
 				color: $white;
 
-                path {
-                    fill: $white;
-                }
+				path {
+					fill: $white;
+				}
 			}
 		}
 
-        input {
-            width: 100%;
+		input {
+			width: 100%;
 			cursor: pointer;
-        }
+		}
 
-        .time_display {
-            flex-shrink: 0;
-            width: fit-content;
-            font-size: 0.9rem;
-        }
+		.time_display {
+			flex-shrink: 0;
+			width: fit-content;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media screen and (min-width: 550px) {
+	.audioPlayer {
+		flex-direction: row;
+		justify-content: space-around;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 350px) {
+	.audioPlayer {
+		padding: 1rem 2rem;
 	}
 }

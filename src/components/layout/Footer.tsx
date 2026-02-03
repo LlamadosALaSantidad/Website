@@ -10,7 +10,7 @@ function Footer() {
         <footer>
             <div className="footer_us">
                 <Link to="/">
-                    <img src="images/icons/primaryLogo.svg" alt="logo" className="footer_logo"/>
+                    <img src="/images/icons/primaryLogo.svg" alt="logo" className="footer_logo"/>
                 </Link>
                 <p className="slogan">{SITE_INFO.slogan}</p>
                 <SocialMenu className="footer_social" />

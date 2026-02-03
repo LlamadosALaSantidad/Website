@@ -50,7 +50,7 @@
 	}
 
 	.saint_content {
-		padding: 2rem;
+		padding: 1rem;
 		background-color: $gray;
 		gap: 2rem;
 		width: 100%;
@@ -293,5 +293,11 @@
 		.saint_content {
 			padding: 5rem 10rem;
 		}
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.saintDetail .saint_content .saint_md iframe {
+		min-height: 30rem;
 	}
 }
