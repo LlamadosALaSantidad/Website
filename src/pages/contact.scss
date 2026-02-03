@@ -21,10 +21,10 @@
 
     .contact_content {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         justify-items: center;
         gap: 2rem;
-        padding: 5rem;
+        padding: 2rem;
         width: 90%;
         margin: 0 auto;
         max-width: 75rem;
@@ -108,5 +108,11 @@
             grid-template-columns: 1fr 1fr;
             justify-content: center;
         }
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .contact .contact_content {
+        padding: 5rem;
     }
 }

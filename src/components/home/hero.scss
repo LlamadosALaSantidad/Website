@@ -1,133 +1,140 @@
 @use "../../styles/vars" as *;
 
 .hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    background: url("/images/hero.png") center center / cover no-repeat;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: relative;
-    text-align: left;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	background: url("/images/hero.png") center center / cover no-repeat;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	position: relative;
+	text-align: left;
 
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        background-color: rgba($color: $black, $alpha: 0.5);
-        z-index: 1;
-    }
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		background-color: rgba($color: $black, $alpha: 0.5);
+		z-index: 1;
+	}
 
-    span, h1, p, div {
-        z-index: 2;
-    }
+	span,
+	h1,
+	p,
+	div {
+		z-index: 2;
+	}
 
-    .badge {
-        border-radius: $card-radius;
-        padding: 0.3rem 1rem;
-        font-weight: 600;
-        background-color: rgb(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); 
-        color: $primary;
-        box-shadow: $shadow;
-    }
+	.badge {
+		display: none;
+	}
 
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 0;
-        max-width: 40rem;
-        color: $white;
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 0;
+		max-width: 40rem;
+		color: $white;
 
-        span {
-            background-image: $primary-gradient-linear;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
-    }
+		span {
+			background-image: $primary-gradient-linear;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+	}
 
-    p {
-        font-size: 1.3rem;
-        max-width: 35rem;
-        font-weight: 200;
-        color: $white;
-    }
+	p {
+		font-size: 1.3rem;
+		max-width: 35rem;
+		font-weight: 200;
+		color: $white;
+	}
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
 
-        button {
-            width: 11rem;
-        }
-    }
+		button {
+			width: 11rem;
+		}
+	}
 }
 
 @media screen and (min-width: 1070px) {
-    .hero {
-        h1 {
-            font-size: 4rem;
-        }
+	.hero {
+		h1 {
+			font-size: 4rem;
+		}
 
-        p {
-            font-size: 1.6rem;
-        }
-    }
+		p {
+			font-size: 1.6rem;
+		}
+	}
 }
 
 @media screen and (min-width: 750px) and (max-width: 1070px) {
-    .hero {
-        h1 {
-            font-size: 3rem;
-        }
+	.hero {
+		h1 {
+			font-size: 3rem;
+		}
 
-        p {
-            font-size: 1.4rem;
-        }
-    }
+		p {
+			font-size: 1.4rem;
+		}
+	}
 }
 
 @media screen and (min-width: 700px) and (max-width: 750px) {
-    .hero {
-        h1 {
-            font-size: 2.8rem;
-        }
+	.hero {
+		h1 {
+			font-size: 2.8rem;
+		}
 
-        p {
-            font-size: 1.3rem;
-        }
-    }
+		p {
+			font-size: 1.3rem;
+		}
+	}
 }
 
 @media screen and (min-width: 660px) and (max-width: 700px) {
-    .hero {
-        h1 {
-            font-size: 2.7rem;
-        }
-    }
+	.hero {
+		h1 {
+			font-size: 2.7rem;
+		}
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 660px) {
-    .hero {
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
+	.hero {
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
 }
 
 @media screen and (min-width: 500px) {
-    .hero {
-        height: 80vh;
+	.hero {
+		height: 80vh;
 
-        .buttons {
-            flex-direction: row;
-        }
-    }
+		.badge {
+			border-radius: $card-radius;
+			padding: 0.3rem 1rem;
+			font-weight: 600;
+			background-color: rgb(255, 255, 255, 0.3);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			color: $primary;
+			box-shadow: $shadow;
+		}
+
+		.buttons {
+			flex-direction: row;
+		}
+	}
 }
