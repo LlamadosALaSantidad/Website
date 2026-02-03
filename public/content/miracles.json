@@ -11,16 +11,6 @@
 			"region": "Europa",
             "date": "2024-08-15",
 			"image": "/images/eucharistic-miracles/milagro-eucaristico-de-lanciano/cover.webp"
-		},
-		{
-			"id": "milagro-eucaristico-de-tixtla",
-			"slug": "milagro-eucaristico-de-tixtla",
-			"name": "Milagro Eucarístico de Tixtla",
-			"description": "La hostia comenzó a sangrar durante la misa.",
-			"location": "Tixtla, México",
-			"region": "América",
-            "date": "2024-08-15",
-			"image": "/images/eucharistic-miracles/milagro-eucaristico-de-tixtla/cover.webp"
 		}
 	]
 }

@@ -12,17 +12,6 @@
 			"image": "/images/saints/san-francisco-de-asis/cover.webp",
 			"categories": ["Confesores"],
 			"tags": ["Fundadores", "Pobreza"]
-		},
-		{
-			"id": "santa-teresa-de-calcuta",
-			"slug": "santa-teresa-de-calcuta",
-			"name": "Santa Teresa de Calcuta",
-			"description": "Religiosa dedicada al servicio de los más pobres entre los pobres.",
-			"location": "India",
-			"date": "09-05",
-			"image": "/images/saints/santa-teresa-de-calcuta/cover.webp",
-			"categories": ["Santas"],
-			"tags": ["Fundadores", "Pobreza"]
 		}
 	]
 }
