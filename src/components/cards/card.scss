@@ -47,6 +47,7 @@
 			position: relative;
 			display: flex;
 			cursor: help;
+			-webkit-tap-highlight-color: transparent;
 
 			.dots {
 				padding: 0.2rem 0.5rem;
@@ -81,16 +82,11 @@
 				}
 			}
 
-			&:hover .tags_tooltip {
-				visibility: visible;
-				opacity: 1;
-				bottom: 130%;
-			}
-
 			&.is-active .tags_tooltip {
                 visibility: visible;
                 opacity: 1;
                 bottom: 130%;
+				pointer-events: auto;
             }
 
 			@media (hover: hover) {

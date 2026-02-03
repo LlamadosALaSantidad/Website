@@ -27,7 +27,8 @@ function Card({ saint, miracle }: CardProps) {
 
     const toggleTooltip = (e: React.MouseEvent) => {
         if (isMobile) {
-            e.preventDefault(); // Evita comportamientos extraños
+            e.preventDefault();
+            e.stopPropagation();
             setShowTooltip(!showTooltip);
         }
     };
@@ -35,8 +36,8 @@ function Card({ saint, miracle }: CardProps) {
     useEffect(() => {
         if (!showTooltip) return;
         const close = () => setShowTooltip(false);
-        window.addEventListener('click', close);
-        return () => window.removeEventListener('click', close);
+        document.addEventListener('click', close);
+        return () => document.removeEventListener('click', close);
     }, [showTooltip]);
 
     if (!data) return null;
@@ -75,7 +76,10 @@ function Card({ saint, miracle }: CardProps) {
                         onClick={toggleTooltip}
                     >
                         <span className="dots">...</span>
-                        <div className="tags_tooltip">
+                        <div
+                            className="tags_tooltip"
+                            onClick={(e) => e.stopPropagation()}
+                        >
                             {hiddenTags.join(", ")}
                         </div>
                     </div>
