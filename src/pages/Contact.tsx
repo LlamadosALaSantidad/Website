@@ -26,24 +26,25 @@ function Contact() {
                         <WhatsAppIcon />
                         <h3>WhatsApp</h3>
                         <p>Escríbenos directamente para una respuesta rápida.</p>
-                        <Button variant="ws"><a href={WHATSAPP_LINK} target="_blank">Abrir Chat</a></Button>
+                        <a href={WHATSAPP_LINK} target="_blank"><Button variant="ws">Abrir Chat</Button></a>
                     </article>
 
                     <article className="contact_community">
                         <h3>Únete a la Comunidad</h3>
                         <p>Mantente actualizado con las últimas historias a través de nuestras redes sociales.</p>
-                        <Button variant="fb">
-                            <a href={FACEBOOK_LINK} target="_blank">
+
+                        <a href={FACEBOOK_LINK} target="_blank">
+                            <Button variant="fb">
                                 <FacebookIcon />
                                 <span>Grupo de Facebook</span>
-                            </a>
-                        </Button>
-                        <Button variant="ig">
-                            <a href={INSTAGRAM_LINK} target="_blank">
+                            </Button>
+                        </a>
+                        <a href={INSTAGRAM_LINK} target="_blank">
+                            <Button variant="ig">
                                 <InstagramIcon />
-                                <span>SInstagram</span>
-                            </a>
-                        </Button>
+                                <span>Instagram</span>
+                            </Button>
+                        </a>
                     </article>
                 </section>
 

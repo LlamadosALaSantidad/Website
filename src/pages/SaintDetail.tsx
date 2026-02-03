@@ -100,7 +100,7 @@ function SaintDetail() {
                                 <div className="saint_miracles_card">
                                     <h3>Milagros Asociados</h3>
                                     <p>Descubre los milagros atribuidos a su intercesión (distintos a los eucarísticos).</p>
-                                    <button><Link to={`${PATHS.SAINTS}/${slug}/milagros`}>Ver milagros</Link></button>
+                                    <Link to={`${PATHS.SAINTS}/${slug}/milagros`}><button>Ver milagros</button></Link>
                                 </div>
                             )}
 
@@ -108,7 +108,7 @@ function SaintDetail() {
                                 <div className="saint_experiences_card">
                                     <h3>Experiencias y Testimonios</h3>
                                     <p>Lee cómo San Francisco de Asís ha intercedido en la vida de otras personas.</p>
-                                    <button><Link to={`${PATHS.SAINTS}/${slug}/testimonios`}>Leer testimonios</Link></button>
+                                    <Link to={`${PATHS.SAINTS}/${slug}/testimonios`}><button>Leer testimonios</button></Link>
                                 </div>
                             )}
                         </div>

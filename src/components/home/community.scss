@@ -1,51 +1,50 @@
 @use "../../styles/vars" as *;
 
 .community {
-    background-color: $dark-blue;
-    color: $white;
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+	background-color: $dark-blue;
+	color: $white;
+	padding: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
 
-    .community_icon {
-        background-color: #2A3039;
-        color: $secondary;
-        border-radius: 50%;
-        overflow: visible;
-        padding: 0.4rem;
-        width: 3.5rem;
-        height: 3.5rem;
-    }
+	.community_icon {
+		background-color: #2a3039;
+		color: $secondary;
+		border-radius: 50%;
+		overflow: visible;
+		padding: 0.4rem;
+		width: 3.5rem;
+		height: 3.5rem;
+	}
 
-    h2, p {
-        margin: 0;
-    }
+	h2,
+	p {
+		margin: 0;
+	}
 
-    h2 {
-        font-size: 2rem;
-    }
+	h2 {
+		font-size: 2rem;
+	}
 
-    p {
-        max-width: 35rem;
-        font-size: 1.2rem;
-    }
+	p {
+		max-width: 35rem;
+		font-size: 1.2rem;
+	}
 
-    .community_buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+	.community_buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 
-        button {
-            a {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-    }
+		a button {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
 }

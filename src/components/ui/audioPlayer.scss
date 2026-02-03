@@ -46,6 +46,7 @@
 		button {
 			background-color: transparent;
 			border: none;
+			cursor: pointer;
 
 			svg {
 				color: $white;
@@ -58,6 +59,7 @@
 
         input {
             width: 100%;
+			cursor: pointer;
         }
 
         .time_display {

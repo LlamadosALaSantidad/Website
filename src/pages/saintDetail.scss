@@ -68,7 +68,8 @@
 			display: none;
 		}
 
-		.saint_history, .saint_md {
+		.saint_history,
+		.saint_md {
 			text-align: left;
 
 			.saint_description {
@@ -124,16 +125,20 @@
 					opacity: 1;
 				}
 
-				button {
-					border: none;
-					border-radius: $btn-radius;
-					padding: 0.4rem 1rem;
-					font-size: 0.9rem;
+				a {
+					width: fit-content;
+					display: block;
 
-					a {
+					button {
+						cursor: pointer;
+						border: none;
+						border-radius: $btn-radius;
 						font-family: $title;
 						color: $white;
 						font-weight: 500;
+						font-size: 0.9rem;
+						display: block;
+						padding: 0.4rem 1rem;
 					}
 				}
 			}
@@ -151,10 +156,9 @@
 					border: 1px solid #2bade5;
 				}
 
-				&:hover button {
-					background-color: $white;
-
-					a {
+				&:hover a {
+					button {
+						background-color: $white;
 						color: $primary;
 					}
 				}
@@ -173,10 +177,11 @@
 					border: 1px solid #ec08c1;
 				}
 
-				&:hover button {
-					background-color: $white;
+				&:hover a {
+					color: $secondary;
 
-					a {
+					button {
+						background-color: $white;
 						color: $secondary;
 					}
 				}

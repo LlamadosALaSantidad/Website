@@ -9,22 +9,23 @@ function Community() {
 
     return (
         <section className="community">
-            <CommunityIcon className="community_icon"/>
+            <CommunityIcon className="community_icon" />
             <h2>Únete a nuestra comunidad</h2>
             <p>No te pierdas ninguna actualización. Síguenos en nuestras redes sociales para recibir recordatorios de nuevas historias.</p>
             <div className="community_buttons">
-                <Button variant="fb">
-                    <a href={FACEBOOK_LINK} target="_blank">
+                <a href={FACEBOOK_LINK} target="_blank">
+                    <Button variant="fb">
                         <FacebookIcon />
                         <span>Grupo de Facebook</span>
-                    </a>
-                </Button>
-                <Button variant="ig">
-                    <a href={INSTAGRAM_LINK} target="_blank">
+                    </Button>
+                </a>
+                <a href={INSTAGRAM_LINK} target="_blank">
+                    <Button variant="ig">
                         <InstagramIcon />
                         <span>Síguenos en Instagram</span>
-                    </a>
-                </Button>
+
+                    </Button>
+                </a>
             </div>
         </section>
     );

@@ -31,7 +31,11 @@ function FeaturedMiracles() {
             </div>
             <article className="featured_miracles_grid">
                 {
+                    featuredMiracles.length > 0
+                    ?
                     featuredMiracles.map((miracle, index) => <Card miracle={miracle} key={index} />)
+                    :
+                    <p>No hay contenido actualmente. Vuelve más tarde!</p>
                 }
             </article>
         </section>

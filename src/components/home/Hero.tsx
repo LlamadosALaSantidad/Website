@@ -11,8 +11,8 @@ function Hero() {
             <h1>En vías de <span>Santidad</span></h1>
             <p>{SITE_INFO.description}</p>
             <div className="buttons">
-                <Button variant="primary"><Link to={PATHS.SAINTS}>Explorar Santos</Link></Button>
-                <Button variant="secondary"><Link to={PATHS.MIRACLES}>Ver Milagros</Link></Button>
+                <Link to={PATHS.SAINTS}><Button variant="primary">Explorar Santos</Button></Link>
+                <Link to={PATHS.MIRACLES}><Button variant="secondary">Ver Milagros</Button></Link>
             </div>
         </section>
     );

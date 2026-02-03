@@ -51,16 +51,18 @@
                 max-width: 25rem;
             }
 
-            button {
+            a {
                 width: 100%;
-                max-width: 16rem;
                 display: flex;
                 justify-content: center;
 
-                a {
+                button {
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     gap: 1rem;
+                    max-width: 16rem;
+                    width: 100%;
                 }
             }
         }
@@ -107,8 +109,4 @@
             justify-content: center;
         }
     }
-}
-
-@media screen and (min-width: 1200px) {
-    .contact {}
 }
