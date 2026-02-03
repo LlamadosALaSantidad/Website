@@ -4,11 +4,26 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    background-color: $terciary;
+    background: url("images/hero.png") center center / cover no-repeat;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: relative;
+    text-align: left;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        background-color: rgba($color: $black, $alpha: 0.5);
+        z-index: 1;
+    }
+
+    span, h1, p, div {
+        z-index: 2;
+    }
 
     .badge {
         border-radius: $card-radius;
@@ -25,6 +40,7 @@
         font-size: 2rem;
         margin-bottom: 0;
         max-width: 40rem;
+        color: $white;
 
         span {
             background-image: $primary-gradient-linear;
@@ -35,9 +51,10 @@
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         max-width: 35rem;
         font-weight: 200;
+        color: $white;
     }
 
     .buttons {
@@ -53,7 +70,7 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1070px) {
     .hero {
         h1 {
             font-size: 4rem;
@@ -65,14 +82,42 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 750px) and (max-width: 1070px) {
     .hero {
         h1 {
             font-size: 3rem;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 750px) {
+    .hero {
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 700px) {
+    .hero {
+        h1 {
+            font-size: 2.7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 660px) {
+    .hero {
+        h1 {
+            font-size: 2.5rem;
         }
     }
 }
