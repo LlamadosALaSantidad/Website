@@ -11,6 +11,7 @@ function Card({ saint, miracle }: CardProps) {
     const isSaint = !!saint;
     const data = saint || miracle;
     const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
+    const [showTooltip, setShowTooltip] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,6 +24,20 @@ function Card({ saint, miracle }: CardProps) {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    const toggleTooltip = (e: React.MouseEvent) => {
+        if (isMobile) {
+            e.preventDefault(); // Evita comportamientos extraños
+            setShowTooltip(!showTooltip);
+        }
+    };
+
+    useEffect(() => {
+        if (!showTooltip) return;
+        const close = () => setShowTooltip(false);
+        window.addEventListener('click', close);
+        return () => window.removeEventListener('click', close);
+    }, [showTooltip]);
 
     if (!data) return null;
 
@@ -55,7 +70,10 @@ function Card({ saint, miracle }: CardProps) {
                 ))}
 
                 {hasMore && (
-                    <div className="tags_more">
+                    <div
+                        className={`tags_more ${showTooltip ? 'is-active' : ''}`}
+                        onClick={toggleTooltip}
+                    >
                         <span className="dots">...</span>
                         <div className="tags_tooltip">
                             {hiddenTags.join(", ")}

@@ -86,6 +86,20 @@
 				opacity: 1;
 				bottom: 130%;
 			}
+
+			&.is-active .tags_tooltip {
+                visibility: visible;
+                opacity: 1;
+                bottom: 130%;
+            }
+
+			@media (hover: hover) {
+                &:hover .tags_tooltip {
+                    visibility: visible;
+                    opacity: 1;
+                    bottom: 130%;
+                }
+            }
 		}
 	}
 
