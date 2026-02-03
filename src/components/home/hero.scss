@@ -123,6 +123,7 @@
 		height: 80vh;
 
 		.badge {
+			display: block;
 			border-radius: $card-radius;
 			padding: 0.3rem 1rem;
 			font-weight: 600;
