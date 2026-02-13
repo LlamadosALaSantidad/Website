@@ -3,15 +3,15 @@
 	"lastUpdated": "2026-01-25",
 	"saints": [
 		{
-			"id": "san-francisco-de-asis",
-			"slug": "san-francisco-de-asis",
-			"name": "San Francisco de Asís",
+			"id": "san-agustin-de-hipona",
+			"slug": "san-agustin-de-hipona",
+			"name": "San Agustín de Hipona",
 			"description": "Fundador de la Orden Franciscana y ejemplo de vida en pobreza y humildad.",
-			"location": "Italia",
-			"date": "4 de Octubre",
-			"image": "/images/saints/san-francisco-de-asis/cover.webp",
-			"categories": ["Confesores"],
-			"tags": ["Fundadores", "Pobreza"]
+			"location": "Argelia",
+			"date": "28 de Agosto",
+			"image": "/images/saints/san-agustin-de-hipona/cover.webp",
+			"categories": ["Doctores"],
+			"tags": ["Papas y Obispos"]
 		}
 	]
 }

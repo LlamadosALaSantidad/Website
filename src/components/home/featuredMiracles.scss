@@ -51,7 +51,7 @@
         justify-content: center;
 
         .card {
-            max-width: none;
+            max-width: calc(50vw - 12rem);
             max-height: none;
         }
 	}

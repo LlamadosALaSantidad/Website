@@ -1,0 +1,45 @@
+{
+	"id": "san-agustin-de-hipona",
+	"slug": "san-agustin-de-hipona",
+	"name": "San Agustín de Hipona",
+
+	"feastDay": "28 de Agosto",
+
+	"location": {
+		"city": "Tagaste",
+		"country": "Argelia"
+	},
+
+	"category": "Doctores",
+	"tags": ["Papas y Obispos"],
+
+	"description": "Fundador de la Orden Franciscana y ejemplo radical de pobreza evangélica.",
+
+	"coverImage": "/images/saints/san-agustin-de-hipona/cover.webp",
+	"portraitImage": "/images/saints/san-agustin-de-hipona/portrait.webp",
+
+	"audio": {
+		"exists": false,
+		"src": "/content/saints/san-agustin-de-hipona/audio.mp3"
+	},
+
+	"related": {
+		"miraclesPage": false,
+		"testimoniesPage": false
+	},
+
+	"audioMiracles": {
+		"exists": false,
+		"src": ""
+	},
+
+	"audioTestimonies": {
+		"exists": false,
+		"src": ""
+	},
+
+	"seo": {
+		"title": "San Agustín de Hipona | Llamados a la Santidad",
+		"description": "Vida y espiritualidad de San Agustín de Hipona."
+	}
+}
