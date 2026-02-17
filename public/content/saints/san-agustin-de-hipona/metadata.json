@@ -13,13 +13,13 @@
 	"category": "Doctores",
 	"tags": ["Papas y Obispos"],
 
-	"description": "Fundador de la Orden Franciscana y ejemplo radical de pobreza evangélica.",
+	"description": "Siervo de Cristo y siervo de los siervos de Cristo.",
 
 	"coverImage": "/images/saints/san-agustin-de-hipona/cover.webp",
 	"portraitImage": "/images/saints/san-agustin-de-hipona/portrait.webp",
 
 	"audio": {
-		"exists": false,
+		"exists": true,
 		"src": "/content/saints/san-agustin-de-hipona/audio.mp3"
 	},
 
